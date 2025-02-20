@@ -1,0 +1,23 @@
+
+Kernel Upgrade Process for ASG
+
+Reboot Instance in Auto Scaling Group
+--------------------------------------
+1. Take an AMI of the instance to be rebooted.
+2. Navigate to **ASG > Edit**, set **Min Desired Capacity** to **0**, and disable **Health Check** and **Termination** in **Suspended Processes**.
+3. Put the instance into **Standby Mode** (**ASG > Instance Management**). Ensure uncheck "Replace instance".
+4. Reboot the instance.
+5. After the reboot, set the instance back to **In-Service Mode** (**ASG > Instance Management**).
+6. Set **Min Desired Capacity** back to **1** and remove the **Health Check** and **Termination** settings in **Suspended Processes**.
+
+ 
+
+ 
+
+Change Launch Template
+-------------------------
+1. Take the latest AMI from the kernel-upgraded instance.
+2. Navigate to **Launch Template > Modify Template/Create New Version** and specify the newly created AMI.
+3. Set the **Default Template** to the latest version.
+
+
