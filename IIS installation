@@ -1,0 +1,10 @@
+Launch windows server
+
+Go to server manager 
+Click on Add Roles and features
+Click next >> select Role based feature based installation  then click next
+In server selection choose default ‘select server from the server pool’  click next  In Server Role session select Webserver(IIS), then click Add features and click next.
+Click on Next till The Installation
+After the installation IIS will be available in Server Manager
+====
+Click on services in IIS click on Go To IIS
